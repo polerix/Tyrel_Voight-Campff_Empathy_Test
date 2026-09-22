@@ -1,71 +1,20 @@
-alien-console
-==============
+# Archived
 
-This is a ncurses-based application which emulates the terminal application
-shown in Alien: Isolation. When you combine this with a terminal emulator that
-focuses on a retro look (like [Cool Retro Term][]), it doesn't look that far
-off!
+Despite the repo name, this was not part of the Voight-Kampff project. On
+inspection during a consolidation of the polerix Voight-Kampff repos, this
+turned out to be an unrelated fork of
+[alien-console](https://github.com/Swordfish90/cool-retro-term), a
+C/ncurses terminal emulator for the MU/TH/UR computer from *Alien:
+Isolation* — a different franchise, and a different language/stack (C,
+not Python) than the rest of the Voight-Kampff project.
 
-The entries in the "Personal Terminal" screen are completely customizable, using
-a configuration file located in:
+The actual Voight-Kampff project (a Python test engine + web viewer meant
+for Raspberry Pi) now lives in one place:
 
-- the first command line argument, OR
-- `/etc/alien-console/alien-console.conf`, OR
-- `/usr/share/alien-console/alien-console.conf`
+**[polerix/voigt-kampff-empathy-test](https://github.com/polerix/voigt-kampff-empathy-test)**
 
-See `etc/alien-console.conf` for a sample configuration file (which should be
-installed at `/usr/share/alien-console`).
+None of this repo's code was carried over. Its CRT-terminal aesthetic and
+startup-sound approach are credited as adjacent prior art in that repo's
+`docs/design/aesthetic.md`.
 
-Screenshots
------------
-
-These use Cool Retro Term with a theme I came up with to match the Alien
-computers.
-
-- Splash screen:
-
-  ![our](img/our-splash.png)
-
-  Compare to:
-
-  ![real](img/real-splash.jpg)
-
-- Personal Terminal
-
-  ![our](img/our-main.png)
-
-  Compare to:
-
-  ![real](img/real-main.jpg)
-
-[Cool Retro Term]: https://github.com/Swordfish90/cool-retro-term
-
-
-Sound
------
-
-This program can play sound effects at startup. If you were to find the sound
-files inside Alien: Isolation which contained the startup sequence sound
-effects, you could place a `wav` file at `/var/local/console.wav` and listen for
-the magic. I don't want to distribute that because copyright.
-
-Install & Run
--------------
-
-See [INSTALL.md][INSTALL.md] for install instructions. If you have installed it
-to your system (with `sudo make install`), you can invoke it like this:
-
-    alien-console
-    # searches for /usr/share/alien-console/alien-console.conf
-    # then /etc/alien-console/alien-console.conf
-
-If you have just compiled it, you'll need to specify a config file (as the
-default one will not be installed to your system):
-
-    ./alien-console etc/alien-console.conf
-
-Etc
----
-
-The license is Revised BSD. See `LICENSE` for more details. See the Changelog
-for changes and version info.
+This repo is no longer maintained.
